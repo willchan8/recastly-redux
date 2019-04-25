@@ -4,22 +4,27 @@ import handleSearchChange from '../actions/search.js';
 import { handleVideoSearch } from '../../spec/reduxSpec/reduxMocks.jsx';
 
 // mapStatetoProps: Function
+// returned stateProps object is merged into the components props
 const mapStateToProps = (state) => {
+  // gets data from the current state and makes them available to the Search component as props
   return { 
-    videos: state.videoList,
+    videos: state.videos,
     video: state.currentVideo
   };
 };
 
-// mapDispatchToProps?: Function | Object
+// mapDispatchToProps: Function | Object
+// returns 
 const mapDispatchToProps = (dispatch) => {
-  //should have prop called handleSearchInputChange which dispatches handleVideoSearch
+  // should have prop called handleSearchInputChange which dispatches handleVideoSearch
+
+  // gets _________ function and makes it available to the Search component (under this.props.actions)
   return {
     handleSearchInputChange: query => dispatch(handleVideoSearch(query))
   };
 };
 
-// Use 'connect' method to generate container 
+// passing mapStatetToProps subscribes the container component to the Redux store updates
 var SearchContainer = connect(mapStateToProps, mapDispatchToProps)(Search);
 
 //TODO: define a SearchContainer component which will hook up your action

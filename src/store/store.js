@@ -10,8 +10,8 @@ const store = createStore(rootReducer, initialState,
 );
 
 var initialState = {
-  currentVideo: null,
-  videoList: exampleVideoData
+  videos: exampleVideoData,
+  currentVideo: null
 };
 
 export default store;
