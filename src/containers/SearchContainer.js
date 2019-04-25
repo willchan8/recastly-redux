@@ -2,7 +2,19 @@ import { connect } from 'react-redux';
 import Search from './../components/Search.js';
 import handleSearchChange from '../actions/search.js';
 
-var SearchContainer = () => {};
+// function mapStateToProps(state) {
+//     return { }
+// }
+// function mapDispatchToProps(dispatch) {
+
+// }
+var SearchContainer = () => {
+
+    // Use 'connect' method to generate container 
+    // mapStatetoProps?: Function
+    // mapDispatchToProps?: Function | Object
+};
+
 
 //TODO: define a SearchContainer component which will hook up your action
 // dispatchers with your search component props.

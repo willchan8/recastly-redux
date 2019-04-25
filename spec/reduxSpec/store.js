@@ -5,6 +5,7 @@ import { mockStore, mockThunk } from './reduxMocks.jsx';
 describe('store', function() {
   it('should be an instance of a redux store', function() {
     var expected = Object.keys(mockStore);
+    expected.push('liftedStore');
     var actual = Object.keys(store);
     expect(actual).to.deep.equal(expected);
   });
